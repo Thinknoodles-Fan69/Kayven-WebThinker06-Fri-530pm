@@ -50,10 +50,11 @@
       </script>
       <div class="conainer">
       <form>
-        <div class="row">
+      <div class="row">
           <div class="col">
           <label for="firstname">First Name</label>
-          <input class="form-control" type="text" id="firstname" placeholder="What is your first name?"/>
+          <input class="form-control is-invalid" type="text" id="firstname" placeholder="What is your first name?"/>
+          <p id="firstnameError" class="text-danger ">Name field cannot be left empty or blank!</p>
         </div>
         <div class="col">
           <label for="firstname">Email</label>
@@ -68,7 +69,7 @@
         <textarea class="form-control" rows="5"></textarea>
 
       <div class="pb-3 pt-3" >
-        <button type="form" class="btn btn-success">Send</button>
+        <button type="button" class="btn btn-success" onclick="validate();">Send</button>
       </div>
       </form></div>
 
@@ -183,5 +184,29 @@
     <h5 class="p3resilience prefects roboticsclub">h5 is smaller in text size compared to h4</h5>
     <h6 class="p3resilience">heading 6 is the smallest font</h6>
     <p id="jovan1234">Some more text. A new paragraph.</p>
+
+    <script>
+      let validate = () => {
+        //alert("The fields have been sended to our nearest and online staff member. Please hold on!")
+        let inputfirstName = document.getElementById("firstname");
+        console.log("I got this " + inputfirstName.value);
+
+        if (inputfirstName.value.length > 0) {
+          inputfirstName.classList = "form-control is-valid";
+          document.getElementById("firstnameError").classList = "text-danger d-none";
+        } else {
+          inputfirstName.classList = "form-control is-invalid";
+          document.getElementById("firstnameError").classList = "text-danger";
+        }
+        
+        if (document.getElementsByClassName("is-invalid").length > 0) {
+        console.log("Please check for any errors. This form will be deleted by 30 minutes if the error is not cleared")
+      } else {
+        console.log("Form is submitted! Please hold on for a reply from a online and vacant helper")
+      }
+      }
+
+      
+    </script>
   </body>
 </html>

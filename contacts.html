@@ -71,25 +71,28 @@
 					<p id="firstnameError" class="text-danger d-none" >Please Provide Your Name So That We Can Help You</p>
 				  </div>
 				  <div class="col">
-					<label for="firstname">Email Address*</label>
+					<label for="email">Email Address*</label>
 					<input class="form-control" type="email" id="email" placeholder="abcdef@abc.com"/>
+					<p id="emailError" class="text-danger  d-none" >Please Provide Your Email So That We Can Help You</p>
 				  </div>
 				  </div>
 				  <label for="contactno">Subject*</label>
 				  <input class="form-control" type="number" id="contactno" name="Contact Number" placeholder="Enquiry on how to code"/>
-				
+				  
 		  
-				  <label for="comments">Subject</label>
+				  <label for="comments">Leave Your Comments Here</label>
 				  <textarea class="form-control" rows="5"></textarea>
 		  
 				<div class="pb-3 pt-3" >
-				  <button type="form" class="btn btn-success">Send</button>
+				  <button type="button" class="btn btn-success" onclick="validate()">Send</button>
 				</div>
 				</form></div>
 			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
 	</article>
+	
 	<!-- End of coding region -->
 	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
+
 </body>
 </html>
