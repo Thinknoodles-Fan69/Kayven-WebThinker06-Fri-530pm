@@ -315,5 +315,118 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--After the exam stuff!-->
+<canvas id="drawingboard" width="600" height="600" class="border border-primary">
+</canvas>
+<script>
+
+const canvas = document.getElementById("drawingboard");
+console.log(canvas);
+let context = canvas.getContext("2d");
+
+// gradient = context.createLinearGradient(10, 10, 400, 0);
+// gradient.addColorStop(0, "rgb(234, 158, 79)");
+// gradient.addColorStop(1, "rgb(198, 253, 241)");
+// context.fillStyle = gradient;
+// context.fillRect(0, 0, 600, 600);
+
+let gradient = context.createRadialGradient(50, 50, 0, 150, 150, 150);
+gradient.addColorStop(0, "rgb(0, 0, 255)");
+gradient.addColorStop(0.5, "rgb(255, 0, 0)");
+gradient.addColorStop(1, "rgb(255, 255, 0)");
+context.fillStyle = gradient;
+context.fillRect(10, 10, 300, 200);
+
+
+
+context.beginPath();
+context.arc(120, 120, 10, 0, 2 * Math.PI)
+context.linewidth = 10;
+context.strokeStyle = "rgb(255, 0, 0)";
+context.fillStyle = "rgb(0, 0, 255)";
+context.stroke();
+context.fill();
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+
+
+  
+ </script>
+
+
+
+
+
+
   </body>
 </html>

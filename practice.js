@@ -1,8 +1,8 @@
-let my_home_address = "Ohio St 50 Blk 48 #58-567 470045"
+let my_home_address = "Ohio St 50 Blk 48 #58-567 470045";
 const My_NRIC = "69696969";
 
 console.log(my_home_address);
-console.log(My_NRIC)
+console.log(My_NRIC);
 
 
 //old way
