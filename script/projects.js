@@ -15,6 +15,36 @@ let drawBall = () => {
     context.fill();
 }
 
+
+let animating = () => {
+    
+    if (document.getElementById("playAnimation").checked) {
+        context.reset();
+
+
+        if (ballX < 0 || ballX > canvas.width) {
+            dX = -dX;
+        }
+        if (ballY < 0 || ballY > canvas.height) {
+            dY = -dY;
+        }
+    
+    
+    
+    
+    
+    
+        ballX = ballX + dX;
+        ballY = ballY + dY;
+        drawBall();
+    }
+    
+
+    requestAnimationFrame(animating);
+}
+
+
+
 window.onload = () => {
     canvas = document.getElementById("drawingBoard");
     context = canvas.getContext("2d");
@@ -30,18 +60,7 @@ window.onload = () => {
     dY = 5;
 
     drawBall();
-    refreshAnimation();
+    animating();
 
 
-}
-
-
-
-let refreshAnimation = () => {
-    context.reset();
-    ballX = ballX + dX;
-    ballY = ballY + dY;
-    drawBall();
-
-    refreshAnimationFrame(refreshAnimation);
 }
